@@ -1,0 +1,67 @@
+.parent__grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3, minmax(150px, 200px));
+  grid-auto-rows: 160px;
+  justify-items: end;
+  justify-content: center;
+  align-content: center;
+}
+
+.parent__grid div {
+  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent__grid div p {
+  font-size: 40px;
+  font-weight: bold;
+  display: none;
+}
+
+.TecTacToe__overLay {
+  background-color: rgba(53, 52, 52, 0.844);
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  inset: 0 0 0 0;
+
+  color: white;
+}
+.TecTacToe__overLay button {
+  background-color: rgba(255, 255, 255, 0.844);
+  font-size: 40px;
+  border: none;
+  padding: 1rem 2rem;
+  z-index: 10;
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 520px) {
+  .parent__grid div p {
+    font-size: 35px;
+  }
+  .parent__grid {
+    grid-template-columns: repeat(3, minmax(100px, 150px));
+    grid-auto-rows: 120px;
+    justify-items: end;
+  }
+
+  .TecTacToe__overLay {
+    background-color: rgba(53, 52, 52, 0.844);
+    font-size: 30px;
+  }
+  .TecTacToe__overLay button {
+    font-size: 30px;
+    padding: 0.5rem 1.5rem;
+    color: rgb(0, 0, 0);
+  }
+}
